@@ -2,9 +2,9 @@
 
 namespace MultithreadedProgram
 {
-    class Constants
+    public static class Constants
     {
-        public const string ThreadNumberAsker = "Please enter the number of threads";
-        public static int LenghtOfConsoleColorEnum = Enum.GetNames(typeof(ConsoleColor)).Length;
+        public const string InputHeader = "Please enter the number of threads";
+        public const string AllSymbols = "$%#@!*abcdefghijklmnopqrstuvwxyz1234567890?;:ABCDEFGHIJKLMNOPQRSTUVWXYZ^&";
     }
 }

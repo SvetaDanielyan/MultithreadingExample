@@ -2,18 +2,19 @@
 
 namespace MultithreadedProgram
 {
-    public class RandomHelper
+    public static class RandomHelper
     {
         public static ConsoleColor GetRandomColor()
         {
             Random random = new Random();
-            int num = random.Next(Constants.LenghtOfConsoleColorEnum);
+            int colorEnumLength = Enum.GetNames(typeof(ConsoleColor)).Length;
+            int num = random.Next(colorEnumLength);
             return ConvertHelper.ConvertIntToConsoleColor(num);
         }
 
         public static char GetRandomSymbol()
         {
-            string chars = "$%#@!*abcdefghijklmnopqrstuvwxyz1234567890?;:ABCDEFGHIJKLMNOPQRSTUVWXYZ^&";
+            string chars = Constants.AllSymbols;
             Random rand = new Random();
             int num = rand.Next(0, chars.Length);
             return chars[num];

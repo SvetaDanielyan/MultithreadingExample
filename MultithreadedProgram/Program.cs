@@ -6,12 +6,12 @@ namespace MultithreadedProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Constants.ThreadNumberAsker);
+            Console.WriteLine(Constants.InputHeader);
             int countOfThreads = int.Parse(Console.ReadLine());
 
             for (int i = 0; i < countOfThreads; i++)
             {
-                ThreadBuilder.BuildAThread();
+                ThreadBuilder.BuildThread();
             }
         }
     }

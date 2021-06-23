@@ -2,7 +2,7 @@
 
 namespace MultithreadedProgram
 {
-    class ConvertHelper
+    public static class ConvertHelper
     {
         public static ConsoleColor ConvertIntToConsoleColor(int value)
         {
