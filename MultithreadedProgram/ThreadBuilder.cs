@@ -7,13 +7,18 @@ namespace MultithreadedProgram
     {
         public static void BuildThread()
         {
-            char randomSymbol = RandomHelper.GetRandomSymbol();
-            ConsoleColor randomColor = RandomHelper.GetRandomColor();
-            int randomDelay = RandomHelper.GetRandomDelay();
+            while (true)
+            {
+                char randomSymbol = RandomHelper.GetRandomSymbol();
+                ConsoleColor randomColor = RandomHelper.GetRandomColor();
+                int randomDelay = RandomHelper.GetRandomDelay();
 
-            Writer writer = new Writer(randomSymbol, randomColor, randomDelay);
-            Thread thread = new Thread(writer.Write);
-            thread.Start();
+                Writer writer = new Writer(randomSymbol, randomColor);
+                Thread thread = new Thread(writer.Write);
+                thread.Start();
+                Thread.Sleep(randomDelay);
+            }
+
         }
     }
 }
