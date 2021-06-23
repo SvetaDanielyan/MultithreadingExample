@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MultithreadedProgram
+﻿namespace MultithreadedProgram
 {
     public static class Constants
     {
