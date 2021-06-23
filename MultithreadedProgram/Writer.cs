@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace MultithreadedProgram
 {
@@ -6,17 +7,23 @@ namespace MultithreadedProgram
     {
         private char Symbol { get; set; }
         private ConsoleColor Color { get; set; }
+        private int Delay { get; set; }
 
-        public Writer(char symbol, ConsoleColor color)
+        public Writer(char symbol, ConsoleColor color, int delay)
         {
             Symbol = symbol;
             Color = color;
+            Delay = delay;
         }
 
         public void Write()
         {
-            Console.ForegroundColor = Color;
-            Console.Write(Symbol);
+            while (true)
+            {
+                Console.ForegroundColor = Color;
+                Console.Write(Symbol);
+                Thread.Sleep(Delay);
+            }
         }
     }
 }
