@@ -9,7 +9,7 @@ namespace MultithreadedProgram
             Random random = new Random();
             int colorEnumLength = Enum.GetNames(typeof(ConsoleColor)).Length;
             int num = random.Next(colorEnumLength);
-            return ConvertHelper.ConvertIntToConsoleColor(num);
+            return num.ConvertIntToConsoleColor();
         }
 
         public static char GetRandomSymbol()

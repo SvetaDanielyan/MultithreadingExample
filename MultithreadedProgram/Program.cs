@@ -7,9 +7,9 @@ namespace MultithreadedProgram
         static void Main(string[] args)
         {
             Console.WriteLine(Constants.InputHeader);
-            int countOfThreads = int.Parse(Console.ReadLine());
+            int threadCount = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < countOfThreads; i++)
+            for (int i = 0; i < threadCount; i++)
             {
                 ThreadBuilder.BuildThread();
             }
